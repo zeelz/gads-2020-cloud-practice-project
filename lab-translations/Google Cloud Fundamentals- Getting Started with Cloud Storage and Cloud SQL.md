@@ -2,7 +2,8 @@
 
 ## Task 1: Sign in to the Google Cloud Platform (GCP) Console
 
-On the Google Cloud Platform top-right menu, click **Activate Cloud Shell** icon to open Cloud Shell. 
+Sign in with the Qwiklab provided credentials.
+On the GCP Console top-right menu, click ***Activate Cloud Shell*** icon to open ***Cloud Shell***. When prompted, click ***Continue*** to proceed.
 
 *Since we would be using only Cloud Shell for this lab you might as well click the **Open in new window** icon at the top right of Cloud Shell window to open it in a new tab.*
 

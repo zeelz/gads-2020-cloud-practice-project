@@ -1,10 +1,14 @@
 # Implement Private Google Access and Cloud NAT
 
+## Sign in to the Google Cloud Platform (GCP) Console
+
+Sign in with the Qwiklab provided credentials.
+On the GCP Console top-right menu, click ***Activate Cloud Shell*** icon to open ***Cloud Shell***. When prompted, click ***Continue*** to proceed.
+
 ## Task 1. Create the VM instance
 
 ### Create a VPC network and subnet
 `gcloud compute networks create privatenet --subnet-mode=custom --bgp-routing-mode=regional`
-
 
 `gcloud compute networks subnets create privatenet-us --range=10.130.0.0/20 --network=privatenet --region=us-central1`
 

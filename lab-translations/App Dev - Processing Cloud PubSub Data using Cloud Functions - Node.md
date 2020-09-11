@@ -3,10 +3,20 @@
 
 ## Sign in to the Google Cloud Platform (GCP) Console
 
-On the Google Cloud Platform top-right menu, click Activate Cloud Shell icon to open Cloud Shell.
+Sign in with the Qwiklab provided credentials.
+On the GCP Console top-right menu, click ***Activate Cloud Shell*** icon to open ***Cloud Shell***. When prompted, click ***Continue*** to proceed.
+
+You can list the active account name with this command:
+`gcloud auth list`
+
+You can list the project ID with this command:
+`gcloud config list project`
 
 *Since we would be using only Cloud Shell for this lab you might as well click the Open in new window icon at the top right of Cloud Shell window to open it in a new tab.*
 
+You can list the active account name with this command:
+
+gcloud auth list
 
 ## Preparing the case study application
 
@@ -61,7 +71,7 @@ Return to the Cloud Shell and press `CTRL+C` to stop running the app.
 
 ## Working with Cloud Functions
 
-The `prepare_environment` script created a Pubsub topic called **Feedback**. You can view it with the command below. The last part of that string is the name of the topic.
+The `prepare_environment` script executed above created a Pubsub topic called **Feedback**. You can view it with the command below. The last part of that string is the name of the topic.
 
 `gcloud pubsub topics list`
 
@@ -119,7 +129,12 @@ Navigate back to your parent directory
 `cd ..`
 
 ### Create a Cloud Function
+To process with Cloud Function creation let us confirm if its API is enabled or do so if otherwise.
+Run `gcloud services list | grep cloudfunctions` to confirm
+If nothing was return enable the API with the following command:
+`gcloud services enable cloudfunctions.googleapis.com `
 
+Now run the following command to create a function.
 ```
 gcloud functions deploy process-feedback \
 --region us-central1 \
